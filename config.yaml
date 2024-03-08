@@ -14,7 +14,7 @@ carpentry: 'incubator'
 title: 'Software Testing for Research - Python'
 
 # Date the lesson was created (YYYY-MM-DD, this is empty by default)
-created: ~ Friday 8th March 2024
+created: ~ 2024-03-08
 
 # Comma-separated list of keywords for the lesson
 keywords: 'software, data, lesson, The Carpentries, Testing, FAIR4RS, Python, CI, Continuous Integration, Tests'
