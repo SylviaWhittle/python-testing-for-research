@@ -14,7 +14,7 @@ carpentry: 'incubator'
 title: 'Software Testing for Research - Python'
 
 # Date the lesson was created (YYYY-MM-DD, this is empty by default)
-created: 2024-03-08
+created: '2024-03-08'
 
 # Comma-separated list of keywords for the lesson
 keywords: 'software, data, lesson, The Carpentries, Testing, FAIR4RS, Python, CI, Continuous Integration, Tests'
@@ -23,7 +23,7 @@ keywords: 'software, data, lesson, The Carpentries, Testing, FAIR4RS, Python, CI
 # possible values: pre-alpha, alpha, beta, stable
 life_cycle: 'pre-alpha'
 
-# License of the lesson
+# License of the lesson materials (recommended CC-BY 4.0)
 license: 'CC-BY 4.0'
 
 # Link to the source repository for this lesson
@@ -58,17 +58,18 @@ contact: 'sylvia.whittle@sheffield.ac.uk'
 # - another-learner.md
 
 # Order of episodes in your lesson
-episodes: 
+episodes:
 - introduction.md
+- example-lesson.Rmd
 
 # Information for Learners
-learners: 
+learners:
 
 # Information for Instructors
-instructors: 
+instructors:
 
 # Learner Profiles
-profiles: 
+profiles:
 
 # Customisation ---------------------------------------------
 #
