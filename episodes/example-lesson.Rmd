@@ -2,6 +2,10 @@
 title: 'Example lesson'
 teaching: 10
 exercises: 2
+header-includes: |
+  ```{r}
+  install.packages('reticulate')
+  library(reticulate)
 ---
 
 :::::::::::::::::::::::::::::::::::::: questions 
