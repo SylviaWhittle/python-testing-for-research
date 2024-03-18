@@ -2,6 +2,8 @@
 
 from scripts import add, broken_check_if_prime
 
+import pytest
+
 
 def test_add():
     assert add(1, 2) == 3
@@ -21,3 +23,13 @@ def test_broken_check_if_prime():
     assert broken_check_if_prime(5) == True
     assert broken_check_if_prime(6) == False
     assert broken_check_if_prime(7) == True
+
+
+# Parameterization
+pytest.mark.parametrize(
+    "n, expected", [(0, False), (1, False), (2, True), (3, True), (4, False), (5, True), (6, False), (7, True)]
+)
+
+
+def test_check_if_prime(n, expected):
+    assert broken_check_if_prime(n) == expected
