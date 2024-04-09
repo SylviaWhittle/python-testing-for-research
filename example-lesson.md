@@ -57,7 +57,7 @@ paste("This", "new", "lesson", "looks", "good")
 paste("a", "b")
 ```
 
-```{.output}
+```output
 [1] "a b"
 ```
 
