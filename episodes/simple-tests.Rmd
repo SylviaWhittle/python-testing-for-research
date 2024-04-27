@@ -20,7 +20,7 @@ exercises: 2
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
-# Our first test
+# Your first test
 
 The most basic thing you will want to do in a test is check that an output for a
 function is correct, by checking that it is equal to a certain value.
@@ -53,7 +53,7 @@ has a keyword to do this for us - the `assert` keyword.
 # The `assert` keyword
 
 The `assert` keyword checks if something is true and if it is, it continues, but
-if it isn't, then it crashes, raising an `AssertionError` error. This enables us
+if it isn't, then it crashes, printing an error in the terminal. This enables us
 to write succinct tests without lots of if-statements.
 
 ```python
@@ -63,8 +63,11 @@ def test_add():
   assert add(-1, -2) == -3 # Check that it adds wro negative numbers
 ```
 
+
 Let's put this `add` function in our `scripts.py` file and the `test_add` in our
-`test_scripts.py` file and see what happens when we run `pytest ./`.
+`test_scripts.py` file and see what happens when we run the test.
+
+We run the test by typing the following command. `pytest ./`. (More about this in the next section). See the output here:
 
 ```bash
 ❯ pytest ./
@@ -85,79 +88,93 @@ total number of failed regression tests: 0
 What's more, is that if any of these assert statements fail, it will flag to
 pytest that the test has failed, and pytest will let you know.
 
+Let's try making the test fail:
 
+```python
+def add(a, b):
+  return a - b
+```
 
-:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: instructor
+```python
+def test_add():
+  assert add(1, 2) == 3 # Check that it adds to positive integers
+  assert add(5, 0) == 5 # Check that it adds zero
+  assert add(-1, -2) == -3 # Check that it adds wro negative numbers
+```
 
-Inline instructor notes can help inform instructors of timing challenges
-associated with the lessons. They appear in the "Instructor View"
+Running the test again, we see the following output:
 
-::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+```bash
+❯ pytest ./
+=========================== test session starts ============================
+platform darwin -- Python 3.11.0, pytest-8.1.1, pluggy-1.4.0
+rootdir: /Users/sylvi/Documents/GitKraken/python-testing-for-research/episodes
+plugins: regtest-2.1.1
+collected 1 item                                                           
+
+files/test_scripts.py F                                              [100%]
+
+================================= FAILURES =================================
+_________________________________ test_add _________________________________
+
+    def test_add():
+>       assert add(1, 2) == 3
+E       assert -1 == 3
+E        +  where -1 = add(1, 2)
+
+files/test_scripts.py:9: AssertionError
+-------------------------- pytest-regtest report ---------------------------
+total number of failed regression tests: 0
+========================= short test summary info ==========================
+FAILED files/test_scripts.py::test_add - assert -1 == 3
+============================ 1 failed in 0.01s =============================
+```
+
+Here we see that the test has (successfuly) failed.
+
+Let's break this down.
+
+- `=== FAILURES ===` is the top of the block telling us about the failed tests.
+- `test_add` tells us that the function `test_add` failed.
+- The chevron (`>`) points to the exact line that has failed.
+- The next two lines describe the assertion that caused the failure. In this case we see that it compared -1 (the result of the test case) and 3 (the expected value), and found that they were not the same.
+- The last lines tell us extra information about how many tests failed, such as regression tests and how long it took.
+
+So if this was a real testing situation, we would know to investigate the `add` function to see why it's not behaving as expected.
 
 ::::::::::::::::::::::::::::::::::::: challenge 
 
-## Challenge 1: Can you do it?
+## Challenge 1: Write a test for a multiply function
 
 What is the output of this command?
 
-```r
-paste("This", "new", "lesson", "looks", "good")
+```python
+def multiply(a, b):
+  return a * b
 ```
 
 :::::::::::::::::::::::: solution 
 
-## Output
- 
-```output
-[1] "This new lesson looks good"
+## Solution:
+There are many different test cases that you could include, but it's important to check that different types of cases are covered. A test for this function could look like this:
+
+```python
+def test_multiply():
+  # Check that positive numbers work
+  assert multiply(5, 5) == 25
+  # Check that multiplying by 1 works
+  assert multiply(1, 5) == 5
+  # Check that multiplying by 0 works
+  assert multiply(0, 3) == 0
+  # Check that negative numbers work
+  assert multiply(-5, 2) == -10
 ```
 
 :::::::::::::::::::::::::::::::::
-
-
-## Challenge 2: how do you nest solutions within challenge blocks?
-
-:::::::::::::::::::::::: solution 
-
-You can add a line with at least three colons and a `solution` tag.
-
-:::::::::::::::::::::::::::::::::
-::::::::::::::::::::::::::::::::::::::::::::::::
-
-## Figures
-
-You can include figures generated from R Markdown:
-
-```{r pyramid, fig.alt = "pie chart illusion of a pyramid", fig.cap = "Sun arise each and every morning"}
-pie(
-  c(Sky = 78, "Sunny side of pyramid" = 17, "Shady side of pyramid" = 5), 
-  init.angle = 315, 
-  col = c("deepskyblue", "yellow", "yellow3"), 
-  border = FALSE
-)
-```
-Or you can use pandoc markdown for static figures with the following syntax:
-
-`![optional caption that appears below the figure](figure url){alt='alt text for
-accessibility purposes'}`
-
-![You belong in The Carpentries!](https://raw.githubusercontent.com/carpentries/logo/master/Badge_Carpentries.svg){alt='Blue Carpentries hex person logo with no text.'}
-
-## Math
-
-One of our episodes contains $\LaTeX$ equations when describing how to create
-dynamic reports with {knitr}, so we now use mathjax to describe this:
-
-`$\alpha = \dfrac{1}{(1 - \beta)^2}$` becomes: $\alpha = \dfrac{1}{(1 - \beta)^2}$
-
-Cool, right?
 
 ::::::::::::::::::::::::::::::::::::: keypoints 
 
-- Use `.md` files for episodes when you want static content
-- Use `.Rmd` files for episodes when you need to generate output
-- Run `sandpaper::check_lesson()` to identify any issues with your lesson
-- Run `sandpaper::build_lesson()` to preview your lesson locally
+
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
