@@ -53,11 +53,11 @@ paste("This", "new", "lesson", "looks", "good")
 ```
 
 
-```r
+``` r
 paste("a", "b")
 ```
 
-```output
+``` output
 [1] "a b"
 ```
 
@@ -91,7 +91,7 @@ You can add a line with at least three colons and a `solution` tag.
 You can include figures generated from R Markdown:
 
 
-```r
+``` r
 pie(
   c(Sky = 78, "Sunny side of pyramid" = 17, "Shady side of pyramid" = 5), 
   init.angle = 315, 
