@@ -2,53 +2,61 @@
 title: Setup
 ---
 
-FIXME: Setup instructions live in this document. Please specify the tools and
-the data sets the Learner needs to have installed.
+## Code of Conduct
 
-## Data Sets
+This course is covered by the [Carpentries Code of Conduct](https://docs.carpentries.org/topic_folders/policies/code-of-conduct.html). 
 
-<!--
-FIXME: place any data you want learners to use in `episodes/data` and then use
-       a relative link ( [data zip file](data/lesson-data.zip) ) to provide a
-       link to it, replacing the example.com link.
--->
-Download the [data zip file](https://example.com/FIXME) and unzip it to your Desktop
+As mentioned in the Carpentries Code of Conduct, we encourage you to:
+
+- Use welcoming and inclusive language
+- Be respectful of different viewpoints and experiences
+- Gracefully accept constructive criticism
+- Focus on what is best for the community
+- Show courtesy and respect towards other community members
+
+Instances of abusive, harassing, or otherwise unacceptable behavior may be reported by following our [reporting guidelines](https://docs.carpentries.org/topic_folders/policies/incident-reporting.html).
 
 ## Software Setup
 
-::::::::::::::::::::::::::::::::::::::: discussion
+Please complete these setup instructions before the course starts. This is to ensure that the course can start on time and all of the content can be covered. If you have any issues with the setup instructions, please reach out to a course instructor / coordinator.
 
-### Details
+For this course, you will need:
 
-Setup for different systems can be presented in dropdown menus via a `spoiler`
-tag. They will join to this discussion block, so you can give a general overview
-of the software used in this lesson here and fill out the individual operating
-systems (and potentially add more, e.g. online setup) in the solutions blocks.
+### A Terminal
+Such as Terminal on MacOS / Linux or command prompt on Windows. This is so that you can run Python scripts and commit code to GitHub.
 
-:::::::::::::::::::::::::::::::::::::::::::::::::::
+### A Text Editor
+Preferably a code editor like Visual Studio Code but any text editor will do, such as notepad. This is so that you can write and edit Python scripts. A code editor will provide a better experience for writing code in this course. We recommend Visual Studio Code as it is free and very popular with minimal setup required.
 
-:::::::::::::::: spoiler
+### Python
+Preferably Python 3.10 or 3.11. You can download Python from [Python's official website](https://www.python.org/downloads/)
 
-### Windows
+It is recommended that you use a virtual environment for this course. This can be a standard Python virtual environment or a conda environment. You can create a virtual environment using the following commands:
 
-Use PuTTY
+```bash
+# For a standard Python virtual environment
+python -m venv myenv
+source myenv/bin/activate
 
-::::::::::::::::::::::::
+# For a conda environment
+conda create --name myenv
+conda activate myenv
+```
 
-:::::::::::::::: spoiler
+There are some python packages that will be needed in this course, you can install them using the following command:
 
-### MacOS
+```bash
+pip install numpy pandas matplotlib pytest pytest-regtest pytest-mpl
+```
 
-Use Terminal.app
+### Git
+This course touches on some features of GitHub and requires Git to be installed. You can download Git from the [official Git website](https://git-scm.com/downloads). If this is your first time using Git, you may want to check out the [Git Handbook](https://guides.github.com/introduction/git-handbook/).
 
-::::::::::::::::::::::::
+### A GitHub account
+A GitHub accound is required for the Continuous Integration section of this course.
+You can sign up for a GitHub account on the [GitHub Website](github.com)
 
 
-:::::::::::::::: spoiler
 
-### Linux
 
-Use Terminal
-
-::::::::::::::::::::::::
 

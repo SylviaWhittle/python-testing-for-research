@@ -1,0 +1,179 @@
+---
+title: "Continuous Integration with GitHub Actions"
+teaching: 10
+exercises: 2
+---
+
+:::::::::::::::::::::::::::::::::::::: questions 
+
+- How can I automate the testing of my code?
+- What are GitHub Actions?
+
+::::::::::::::::::::::::::::::::::::::::::::::::
+
+::::::::::::::::::::::::::::::::::::: objectives
+
+- Understand the concept of continuous integration
+- Learn how to use GitHub Actions to automate the testing of your code
+
+::::::::::::::::::::::::::::::::::::::::::::::::
+
+## Continuous Integration
+
+Continuous Integration (CI) is the practice of automating the merging of code changes into a project.
+In the context of software testing, CI is the practice of running tests on every code change to ensure that the code is working as expected.
+GitHub provides a feature called GitHub Actions that allows you to integrate this into your projects.
+
+In this lesson we will go over the very basics of how to set up a GitHub Action to run tests on your code.
+
+## Setting up your project repository
+
+- Create a new repository on GitHub for this lesson called "python-testing-course" (whatever you like really)
+- Clone the repository into your local machine using `git clone <repository-url>` or GitKraken if you use that.
+- Move over all your code from the previous lessons into this repository.
+- Commit the changes using `git add .` and `git commit -m "Add all the project code"`
+- Create a new file called `requirements.txt` in the root of your repository and add the following contents:
+
+```
+pytest
+numpy
+pandas
+pytest-mpl
+pytest-regtest
+matplotlib
+```
+
+This is just a list of all the packages that your project uses and will be needed later.
+Recall that each of these are used in various lessons in this course.
+
+
+Now we have a repository with all our code in it online on GitHub.
+
+## Creating a GitHub Action
+
+GitHub Actions are defined in `yaml` files (these are just simple text files that contain a list of instructions). They are stored
+in the `.github/workflows` directory in your repository.
+
+- Create a new directory in your repository called `.github`
+- Inside the `.github` directory, create a new directory called `workflows`
+- Inside the `workflows` directory, create a new file called `tests.yaml`
+
+This `test.yaml` file is where you will tell GitHub how to run the tests for your code.
+
+Let's add some instructions to the `tests.yaml` file:
+
+```yaml
+# This is just the name of the action, you can call it whatever you like.
+name: Tests (pytest)
+
+# This is the event that triggers the action. In this case, we are telling GitHub to run the tests whenever a pull request is made to the main branch.
+on:
+    pull_request:
+        branches:
+            - main
+
+# This is a list of jobs that the action will run. In this case, we have only one job called build.
+jobs:
+    build:
+        # This is the environment that the job will run on. In this case, we are using the latest version of Ubuntu, however you can ues other operating systems like Windows or MacOS if you like!
+        runs-on: ubuntu-latest
+
+        # This is a list of steps that the job will run. Each step is a command that will be executed on the environment.
+        steps:
+            # This command tells GitHub to use a pre-built action. In this case, we are using the actions/checkout action to check out the repository. This just means that GitHub will use this repository's code to run the tests.
+            - uses: actions/checkout@v3 # Check out the repository on github
+            # This is the name of the step. This is just a label that will be displayed in the GitHub UI.
+            - name: Set up Python 3.10
+              # This command tells GitHub to use a pre-built action. In this case, we are using the actions/setup-python action to set up Python 3.10.
+              uses: actions/setup-python@v3
+              with:
+                  python-version: "3.10"
+            
+            # This step installs the dependencies for the project such as pytest, numpy, pandas, etc using the requirements.txt file we created earlier.
+            - name: Install dependencies
+              run: |
+                python -m pip install --upgrade pip
+                pip install -r requirements.txt
+                    
+            # This step runs the tests using the pytest command. Remember to use the --mpl and --regtest flags to run the tests that use matplotlib and pytest-regtest.
+            - name: Run tests
+              run: |
+                pytest --mpl --regtest
+```
+
+This is a simple GitHub Action that runs the tests for your code whenever a pull request is made to the main branch.
+
+## Upload the workflow to GitHub
+
+Now that you have created the `tests.yaml` file, you need to upload it to GitHub.
+
+- Commit the changes using `git add .` and `git commit -m "Add GitHub Action to run tests"`
+- Push the changes to GitHub using `git push origin main`
+
+## Enable running the tests on a Pull Request
+
+The typical use-case for a CI system is to run the tests whenever a pull request is made to the main branch to add a feature.
+
+- Go to your GitHub repository
+
+<!-- figure
+![branch protection visual instruction](episodes/fig/github-branch-protection.png) -->
+
+- Click on the "Settings" tab
+- Scroll down to "Branches"
+- Under "Branch protection rules" / "Branch name pattern" type "main"
+- Select the checkbox for "Require status checks to pass before merging"
+- Select the checkbox for "Require branches to be up to date before merging"
+
+This makes it so when a Pull Request is made, trying to merge code into main, it will need to have all of its tests passing
+before the code can be merged.
+
+Let's test it out.
+
+- Create a new branch in your repository called `subtract` using `git checkout -b subtract`
+- Add a new function in your `calculator.py` file that subtracts two numbers, but make it wrong on purpose:
+
+```python
+def subtract(a, b):
+    return a + b
+```
+
+- Then add a test for this function in your `test_calculator.py` file:
+
+```python
+def test_subtract():
+    assert subtract(5, 3) == 2
+```
+
+- Commit the changes using `git add .` and `git commit -m "Add subtract function"`
+- Push the changes to GitHub using `git push origin subtract`
+
+- Now go to your GitHub repository and create a new Pull Request to merge the `subtract` branch into `main`
+
+You should see that the GitHub Action runs the tests and fails because the test for the `subtract` function is failing.
+
+- Let's now fix the test and commit the changes: `git add .` and `git commit -m "Fix subtract function"`
+- Push the changes to GitHub using `git push origin subtract` again
+- Go back to the Pull Request on GitHub and you should see that the tests are now passing and you can merge the code into the main branch.
+
+So now, when you or your team want to make a feature or just update the code, the workflow is as follows:
+
+- Create a new branch for the feature
+- Write the code for the feature
+- Write tests for the feature
+- Push the code to GitHub
+- Create a Pull Request
+- Wait for the tests to pass or fail
+- If the tests pass, merge the code into the main branch or fix the code if the tests fail
+
+This will greatly improve the quality of your code and make it easier to collaborate with others.
+
+::::::::::::::::::::::::::::::::::::: keypoints 
+
+- Continuous Integration (CI) is the practice of automating the merging of code changes into a project.
+- GitHub Actions is a feature of GitHub that allows you to automate the testing of your code.
+- GitHub Actions are defined in `yaml` files and are stored in the `.github/workflows` directory in your repository.
+- You can use GitHub Actions to only allow code to be merged into the main branch if the tests pass.
+
+::::::::::::::::::::::::::::::::::::::::::::::::
+

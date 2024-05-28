@@ -58,19 +58,27 @@ contact: 'sylvia.whittle@sheffield.ac.uk'
 # - another-learner.md
 
 # Order of episodes in your lesson
-episodes: 
-- introduction.md
-- example-lesson.Rmd
-- why-test-my-code.Rmd
+episodes:
+- 00-introduction.Rmd
+- 01-why-test-my-code.Rmd
+- 02-simple-tests.Rmd
+- 03-interacting-with-tests.Rmd
+- 04-unit-tests-best-practices.Rmd
+- 05-testing-exceptions.Rmd
+- 06-testing-data-structures.Rmd
+- 07-fixtures.Rmd
+- 08-parametrization.Rmd
+- 09-testing-output-files.Rmd
+- 10-CI.Rmd
 
 # Information for Learners
-learners: 
+learners:
 
 # Information for Instructors
-instructors: 
+instructors:
 
 # Learner Profiles
-profiles: 
+profiles:
 
 # Customisation ---------------------------------------------
 #

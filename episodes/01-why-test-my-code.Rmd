@@ -1,12 +1,12 @@
 ---
-title: 'why-test-my-code'
+title: 'Why Test My Code?'
 teaching: 10
 exercises: 2
 ---
 
 :::::::::::::::::::::::::::::::::::::: questions 
 
-- Why test my code?
+- Why should I test my code?
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
@@ -15,6 +15,15 @@ exercises: 2
 - Understand how testing can help to ensure that code is working as expected
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
+
+## What is software testing?
+
+Software testing is the process of checking that code is working as expected. You may have data processing functions or automations that you use in your work - how do you know that they are doing what you expect them to do?
+
+Software testing is most commonly done by writing code (tests) that check that your code work as expected.
+
+This might seem like a lot of effort, so let's go over some of the reasons you might want to add tests to your project.
+
 
 ## Catching bugs
 
@@ -57,7 +66,7 @@ def test_add():
       print("Test failed!")
 ```
 
-Here we check that the function works for a set of test cases. This ensures that it works for positive numbers, negative numbers, and zero. This type of function is called a "test".
+Here we check that the function works for a set of test cases. We ensure that it works for positive numbers, negative numbers, and zero. 
 
 
 ::::::::::::::::::::::::::::::::::::: challenge 
@@ -66,7 +75,12 @@ Here we check that the function works for a set of test cases. This ensures that
 
 When writing functions, sometimes we don't anticipate all the ways that they could go wrong.
 
-Take a moment to think about what might go wrong with this function to calculate the gradient between two points:
+Take a moment to think about what is wrong, or might go wrong with these functions:
+
+```python
+def greet_user(name):
+   return "Hello" + name + "!"
+```
 
 ```python
 def gradient(x1, y1, x2, y2):
@@ -77,7 +91,16 @@ def gradient(x1, y1, x2, y2):
 
 ## Answer
  
-The function will crash if `x2 - x1` is zero.
+The first function will incorrectly greet the user, as it is missing a space after "Hello". It would print `HelloAlice!` instead of `Hello Alice!`.
+
+If we wrote a test for this function, we would have noticed that it was not working as expected:
+```python
+def test_greet_user():
+   if greet_user("Alice") != "Hello Alice!":
+      print("Test failed!")
+```
+
+The second function will crash if `x2 - x1` is zero.
 
 If we wrote a test for this function, it may have helped us to catch this unexpected behaviour:
 
@@ -99,7 +122,6 @@ def gradient(x1, y1, x2, y2):
       return "Undefined"
    return (y2 - y1) / (x2 - x1)
 ```
-
 
 :::::::::::::::::::::::::::::::::
 ::::::::::::::::::::::::::::::::::::
@@ -126,46 +148,50 @@ There is a bug in this code too, but since we have several functions calling eac
 However, if we had written tests for these functions, then we would have seen that both the `triangle_area` and `multiply` functions were not working as expected, allowing us to quickly see that the bug was in the `multiply` function without having to check the other functions.
 
 
+## Increased confidence in code
+
+When you have tests for your code, you can be more confident that it works as expected. This is especially important when you are working in a team or producing software for users, as it allows everyone to trust the code. If you have a test that checks that a function works as expected, then you can be confident that the function will work as expected, even if you didn't write it yourself.
+
+## Forcing a more structured approach to coding
+
+When you write tests for your code, you are forced to think more carefully about how your code behaves and how you will verify that it works as expected. This can help you to write more structured code, as you will need to think about how to test it as well as how it could fail.
+
 ::::::::::::::::::::::::::::::::::::: challenge
 
 ## Challenge 2: What could go wrong?
 
-Consider a function that controls an oven that automatically cooks food using just its weight.
+Consider a function that controls a driverless car.
 
 - What checks might we add to make sure it is not dangerous to use?
 
 ```python
 
-def cook_by_weight(weight):
-   
-   ...
+def drive_car(speed, direction):
 
-   return cook_time, target_temperature
+   ... # complex car driving code
+
+    return speed, direction, brake_status
+   
+
 ```
 
 :::::::::::::::::::::::: solution
 
 ## Answer
 
-There are lots of checks that we could add, such as:
+- We might want to check that the speed is within a safe range.
 
-- Checking if the weight is too large for the oven to handle
-- Checking if the weight is too small and could cause the food to burn
-- Checking that the cooking time is not too long
-- Checking that the target temperature is not dangerously high
+- We might want to check that the direction is a valid direction. ie not towards a tree, and if so, the car should be applying the brakes.
 
 :::::::::::::::::::::::::::::::::::::
 ::::::::::::::::::::::::::::::::::::::::
 
-
 ::::::::::::::::::::::::::::::::::::: keypoints 
 
-- Automated testing helps to catch hard to spot errors in code.
-- They help to find the root cause of a bug when a test fails in complex functions.
-- They reduce the time spent manually verifying (and re-verifying!) that code works.
-- They help to ensure that code works as expected when changes are made.
-- They are especially useful when working in a team, as they help to ensure that everyone can trust the code.
-
+- Automated testing helps to catch hard to spot errors in code & find the root cause of complex issues.
+- Tests reduce the time spent manually verifying (and re-verifying!) that code works.
+- Tests help to ensure that code works as expected when changes are made.
+- Tests are especially useful when working in a team, as they help to ensure that everyone can trust the code.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 

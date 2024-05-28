@@ -49,3 +49,9 @@ docs/
 # translation temp files
 po/*~
 
+# Python
+*.pyc
+# pycache
+__pycache__/
+
+
