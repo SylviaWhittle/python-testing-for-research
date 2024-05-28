@@ -186,7 +186,7 @@
 <div class="accordion accordion-flush" id="accordionFlush2">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading2">
-        <a href="introduction.html">1. Using Markdown</a>
+        <a href="00-introduction.html">1. Introduction</a>
     </div>
 <!--/div.accordion-header-->
         
@@ -198,7 +198,7 @@
 <div class="accordion accordion-flush" id="accordionFlush3">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading3">
-        <a href="example-lesson.html">2. Example lesson</a>
+        <a href="01-why-test-my-code.html">2. Why Test My Code?</a>
     </div>
 <!--/div.accordion-header-->
         
@@ -210,7 +210,103 @@
 <div class="accordion accordion-flush" id="accordionFlush4">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading4">
-        <a href="why-test-my-code.html">3. why-test-my-code</a>
+        <a href="02-simple-tests.html">3. Simple Tests</a>
+    </div>
+<!--/div.accordion-header-->
+        
+  </div>
+<!--/div.accordion-item-->
+</div>
+<!--/div.accordion-flush-->
+
+<div class="accordion accordion-flush" id="accordionFlush5">
+  <div class="accordion-item">
+    <div class="accordion-header" id="flush-heading5">
+        <a href="03-interacting-with-tests.html">4. Interacting with Tests</a>
+    </div>
+<!--/div.accordion-header-->
+        
+  </div>
+<!--/div.accordion-item-->
+</div>
+<!--/div.accordion-flush-->
+
+<div class="accordion accordion-flush" id="accordionFlush6">
+  <div class="accordion-item">
+    <div class="accordion-header" id="flush-heading6">
+        <a href="04-unit-tests-best-practices.html">5. Unit tests &amp; Testing Practices</a>
+    </div>
+<!--/div.accordion-header-->
+        
+  </div>
+<!--/div.accordion-item-->
+</div>
+<!--/div.accordion-flush-->
+
+<div class="accordion accordion-flush" id="accordionFlush7">
+  <div class="accordion-item">
+    <div class="accordion-header" id="flush-heading7">
+        <a href="05-testing-exceptions.html">6. Testing for Exceptions</a>
+    </div>
+<!--/div.accordion-header-->
+        
+  </div>
+<!--/div.accordion-item-->
+</div>
+<!--/div.accordion-flush-->
+
+<div class="accordion accordion-flush" id="accordionFlush8">
+  <div class="accordion-item">
+    <div class="accordion-header" id="flush-heading8">
+        <a href="06-testing-data-structures.html">7. Testing Data Structures</a>
+    </div>
+<!--/div.accordion-header-->
+        
+  </div>
+<!--/div.accordion-item-->
+</div>
+<!--/div.accordion-flush-->
+
+<div class="accordion accordion-flush" id="accordionFlush9">
+  <div class="accordion-item">
+    <div class="accordion-header" id="flush-heading9">
+        <a href="07-fixtures.html">8. Fixtures</a>
+    </div>
+<!--/div.accordion-header-->
+        
+  </div>
+<!--/div.accordion-item-->
+</div>
+<!--/div.accordion-flush-->
+
+<div class="accordion accordion-flush" id="accordionFlush10">
+  <div class="accordion-item">
+    <div class="accordion-header" id="flush-heading10">
+        <a href="08-parametrization.html">9. Parametrization</a>
+    </div>
+<!--/div.accordion-header-->
+        
+  </div>
+<!--/div.accordion-item-->
+</div>
+<!--/div.accordion-flush-->
+
+<div class="accordion accordion-flush" id="accordionFlush11">
+  <div class="accordion-item">
+    <div class="accordion-header" id="flush-heading11">
+        <a href="09-testing-output-files.html">10. Regression Testing and Plots</a>
+    </div>
+<!--/div.accordion-header-->
+        
+  </div>
+<!--/div.accordion-item-->
+</div>
+<!--/div.accordion-flush-->
+
+<div class="accordion accordion-flush" id="accordionFlush12">
+  <div class="accordion-item">
+    <div class="accordion-header" id="flush-heading12">
+        <a href="10-CI.html">11. Continuous Integration with GitHub Actions</a>
     </div>
 <!--/div.accordion-header-->
         
@@ -274,40 +370,128 @@
     <main id="main-content" class="main-content"><div class="container lesson-content">
         
         
-<section id="introduction"><h2 class="section-heading"><a href="introduction.html">Using Markdown</a></h2>
+<section id="00-introduction"><h2 class="section-heading"><a href="00-introduction.html">Introduction</a></h2>
 <hr class="half-width">
 <ul>
-<li>Use <code>.md</code> files for episodes when you want static
-content</li>
-<li>Use <code>.Rmd</code> files for episodes when you need to generate
-output</li>
-<li>Run <code>sandpaper::check_lesson()</code> to identify any issues
-with your lesson</li>
-<li>Run <code>sandpaper::build_lesson()</code> to preview your lesson
-locally</li>
-</ul></section><section id="example-lesson"><h2 class="section-heading"><a href="example-lesson.html">Example lesson</a></h2>
+<li>This course will teach you how to write effective tests and ensure
+the quality and reliability of your research software</li>
+<li>No prior testing experience is required</li>
+<li>You can catch up on practicals by copying the corresponding folder
+from the <code>files</code> directory of this course’s materials</li>
+</ul></section><section id="01-why-test-my-code"><h2 class="section-heading"><a href="01-why-test-my-code.html">Why Test My Code?</a></h2>
 <hr class="half-width">
 <ul>
-<li>Use <code>.md</code> files for episodes when you want static
-content</li>
-<li>Use <code>.Rmd</code> files for episodes when you need to generate
-output</li>
-<li>Run <code>sandpaper::check_lesson()</code> to identify any issues
-with your lesson</li>
-<li>Run <code>sandpaper::build_lesson()</code> to preview your lesson
-locally</li>
-</ul></section><section id="why-test-my-code"><h2 class="section-heading"><a href="why-test-my-code.html">why-test-my-code</a></h2>
-<hr class="half-width">
-<ul>
-<li>Automated testing helps to catch hard to spot errors in code.</li>
-<li>They help to find the root cause of a bug when a test fails in
-complex functions.</li>
-<li>They reduce the time spent manually verifying (and re-verifying!)
+<li>Automated testing helps to catch hard to spot errors in code &amp;
+find the root cause of complex issues.</li>
+<li>Tests reduce the time spent manually verifying (and re-verifying!)
 that code works.</li>
-<li>They help to ensure that code works as expected when changes are
+<li>Tests help to ensure that code works as expected when changes are
 made.</li>
-<li>They are especially useful when working in a team, as they help to
+<li>Tests are especially useful when working in a team, as they help to
 ensure that everyone can trust the code.</li>
+</ul></section><section id="02-simple-tests"><h2 class="section-heading"><a href="02-simple-tests.html">Simple Tests</a></h2>
+<hr class="half-width">
+<ul>
+<li>The <code>assert</code> keyword is used to check if a statement is
+true and is a shorthand for writing <code>if</code> statements in
+tests.</li>
+<li>Pytest is invoked by running the command <code>pytest ./</code> in
+the terminal.</li>
+<li>
+<code>pytest</code> will run all the tests in the current directory,
+found by looking for files that start with <code>test_</code>.</li>
+<li>The output of a test is displayed in the terminal, with <span style="color:green"><strong>green</strong></span> text indicating a
+successful test and <span style="color:red"><strong>red</strong></span>
+text indicating a failed test.</li>
+<li>It’s best practice to write tests in a separate file from the code
+they are testing. Eg: <code>scripts.py</code> and
+<code>test_scripts.py</code>.</li>
+</ul></section><section id="03-interacting-with-tests"><h2 class="section-heading"><a href="03-interacting-with-tests.html">Interacting with Tests</a></h2>
+<hr class="half-width">
+<ul>
+<li>You can run multiple tests at once by running <code>pytest</code> in
+the terminal.</li>
+<li>Pytest searches for tests in files that start or end with ‘test’ in
+the current directory and subdirectories.</li>
+<li>The output of pytest tells you which tests have passed and which
+have failed and precisely why they failed.</li>
+<li>Flags such as <code>-v</code>, <code>-q</code>, <code>-k</code>, and
+<code>-x</code> can be used to get more detailed output, less detailed
+output, run specific tests, and stop running tests after the first
+failure, respectively.</li>
+</ul></section><section id="04-unit-tests-best-practices"><h2 class="section-heading"><a href="04-unit-tests-best-practices.html">Unit tests &amp; Testing Practices</a></h2>
+<hr class="half-width">
+<ul>
+<li>Complex functions can be broken down into smaller, testable
+units.</li>
+<li>Testing each unit separately is called unit testing.</li>
+<li>The AAA pattern is a good way to structure your tests.</li>
+<li>Test driven development can help you to write clean, maintainable
+code.</li>
+<li>Randomness in tests can be made deterministic using random
+seeds.</li>
+<li>Adding tests to an existing project can be done incrementally,
+starting with regression tests.</li>
+</ul></section><section id="05-testing-exceptions"><h2 class="section-heading"><a href="05-testing-exceptions.html">Testing for Exceptions</a></h2>
+<hr class="half-width">
+<ul>
+<li>Use <code>pytest.raises</code> to check that a function raises an
+exception.</li>
+</ul></section><section id="06-testing-data-structures"><h2 class="section-heading"><a href="06-testing-data-structures.html">Testing Data Structures</a></h2>
+<hr class="half-width">
+<ul>
+<li>You can test equality of lists and dictionaries using the
+<code>==</code> operator.</li>
+<li>Numpy arrays cannot be compared using the <code>==</code> operator.
+Instead, use <code>numpy.testing.assert_array_equal</code> and
+<code>numpy.testing.assert_allclose</code>.</li>
+<li>Data structures that contain numpy arrays should be compared using
+<code>numpy.testing.assert_equal</code>.</li>
+<li>Pandas DataFrames and Series should be compared using
+<code>pandas.testing.assert_frame_equal</code> and
+<code>pandas.testing.assert_series_equal</code>.</li>
+</ul></section><section id="07-fixtures"><h2 class="section-heading"><a href="07-fixtures.html">Fixtures</a></h2>
+<hr class="half-width">
+<ul>
+<li>Fixtures are useful way to store data, objects and automations to
+re-use them in many different tests.</li>
+<li>Fixtures are defined using the <code>@pytest.fixture</code>
+decorator.</li>
+<li>Tests can use fixtures by passing them as arguments.</li>
+<li>Fixtures can be placed in a separate file or in the same file as the
+tests.</li>
+</ul></section><section id="08-parametrization"><h2 class="section-heading"><a href="08-parametrization.html">Parametrization</a></h2>
+<hr class="half-width">
+<ul>
+<li>Parametrization is a way to run the same test with different
+parameters in a concise and more readable way, especially when there is
+a lot of repetition in the setup for each of the different test
+cases.</li>
+<li>Use the <code>@pytest.mark.parametrize</code> decorator to define a
+parametrized test.</li>
+</ul></section><section id="09-testing-output-files"><h2 class="section-heading"><a href="09-testing-output-files.html">Regression Testing and Plots</a></h2>
+<hr class="half-width">
+<ul>
+<li>Regression testing ensures that the output of a function remains
+consistent between changes and are a great first step in adding tests to
+an existing project.</li>
+<li>
+<code>pytest-regtest</code> provides a simple way to do regression
+testing.</li>
+<li>
+<code>pytest-mpl</code> provides a simple way to test plots by
+comparing the output of a test function to a reference image.</li>
+</ul></section><section id="10-CI"><h2 class="section-heading"><a href="10-CI.html">Continuous Integration with GitHub Actions</a></h2>
+<hr class="half-width">
+<ul>
+<li>Continuous Integration (CI) is the practice of automating the
+merging of code changes into a project.</li>
+<li>GitHub Actions is a feature of GitHub that allows you to automate
+the testing of your code.</li>
+<li>GitHub Actions are defined in <code>yaml</code> files and are stored
+in the <code>.github/workflows</code> directory in your repository.</li>
+<li>You can use GitHub Actions to only allow code to be merged into the
+main branch if the tests pass.</li>
 </ul></section>
 </div>
     </main>
