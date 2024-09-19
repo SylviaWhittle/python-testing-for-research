@@ -2,19 +2,9 @@
 title: Setup
 ---
 
-## Code of Conduct
+## Python testing for research
 
-This course is covered by the [Carpentries Code of Conduct](https://docs.carpentries.org/topic_folders/policies/code-of-conduct.html). 
-
-As mentioned in the Carpentries Code of Conduct, we encourage you to:
-
-- Use welcoming and inclusive language
-- Be respectful of different viewpoints and experiences
-- Gracefully accept constructive criticism
-- Focus on what is best for the community
-- Show courtesy and respect towards other community members
-
-Instances of abusive, harassing, or otherwise unacceptable behavior may be reported by following our [reporting guidelines](https://docs.carpentries.org/topic_folders/policies/incident-reporting.html).
+This course aims to equip you with the tools and knowledge required to get started with software testing. It assumes no prior knowledge of testing, just basic familiarity with Python programming. Over the course of these lessons, you will learn what software testing entails, how to write tests, best practices, some more niche & powerful functionality and finally how to incorporate tests in a GitHub repository.
 
 ## Software Setup
 
