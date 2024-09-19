@@ -1,153 +1,153 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://SylviaWhittle.github.io/python-testing-for-research/00-introduction.html</loc>
+    <loc>https://sylviawhittle.github.io/python-testing-for-research/00-introduction.html</loc>
   </url>
   <url>
-    <loc>https://SylviaWhittle.github.io/python-testing-for-research/01-introduction.html</loc>
+    <loc>https://sylviawhittle.github.io/python-testing-for-research/01-introduction.html</loc>
   </url>
   <url>
-    <loc>https://SylviaWhittle.github.io/python-testing-for-research/01-why-test-my-code.html</loc>
+    <loc>https://sylviawhittle.github.io/python-testing-for-research/01-why-test-my-code.html</loc>
   </url>
   <url>
-    <loc>https://SylviaWhittle.github.io/python-testing-for-research/02-simple-tests.html</loc>
+    <loc>https://sylviawhittle.github.io/python-testing-for-research/02-simple-tests.html</loc>
   </url>
   <url>
-    <loc>https://SylviaWhittle.github.io/python-testing-for-research/03-interacting-with-tests.html</loc>
+    <loc>https://sylviawhittle.github.io/python-testing-for-research/03-interacting-with-tests.html</loc>
   </url>
   <url>
-    <loc>https://SylviaWhittle.github.io/python-testing-for-research/04-unit-tests-best-practices.html</loc>
+    <loc>https://sylviawhittle.github.io/python-testing-for-research/04-unit-tests-best-practices.html</loc>
   </url>
   <url>
-    <loc>https://SylviaWhittle.github.io/python-testing-for-research/05-testing-exceptions.html</loc>
+    <loc>https://sylviawhittle.github.io/python-testing-for-research/05-testing-exceptions.html</loc>
   </url>
   <url>
-    <loc>https://SylviaWhittle.github.io/python-testing-for-research/06-testing-data-structures.html</loc>
+    <loc>https://sylviawhittle.github.io/python-testing-for-research/06-testing-data-structures.html</loc>
   </url>
   <url>
-    <loc>https://SylviaWhittle.github.io/python-testing-for-research/07-fixtures.html</loc>
+    <loc>https://sylviawhittle.github.io/python-testing-for-research/07-fixtures.html</loc>
   </url>
   <url>
-    <loc>https://SylviaWhittle.github.io/python-testing-for-research/08-parametrization.html</loc>
+    <loc>https://sylviawhittle.github.io/python-testing-for-research/08-parametrization.html</loc>
   </url>
   <url>
-    <loc>https://SylviaWhittle.github.io/python-testing-for-research/09-testing-output-files.html</loc>
+    <loc>https://sylviawhittle.github.io/python-testing-for-research/09-testing-output-files.html</loc>
   </url>
   <url>
-    <loc>https://SylviaWhittle.github.io/python-testing-for-research/10-CI.html</loc>
+    <loc>https://sylviawhittle.github.io/python-testing-for-research/10-CI.html</loc>
   </url>
   <url>
-    <loc>https://SylviaWhittle.github.io/python-testing-for-research/404.html</loc>
+    <loc>https://sylviawhittle.github.io/python-testing-for-research/404.html</loc>
   </url>
   <url>
-    <loc>https://SylviaWhittle.github.io/python-testing-for-research/CODE_OF_CONDUCT.html</loc>
+    <loc>https://sylviawhittle.github.io/python-testing-for-research/CODE_OF_CONDUCT.html</loc>
   </url>
   <url>
-    <loc>https://SylviaWhittle.github.io/python-testing-for-research/LICENSE.html</loc>
+    <loc>https://sylviawhittle.github.io/python-testing-for-research/LICENSE.html</loc>
   </url>
   <url>
-    <loc>https://SylviaWhittle.github.io/python-testing-for-research/aio.html</loc>
+    <loc>https://sylviawhittle.github.io/python-testing-for-research/aio.html</loc>
   </url>
   <url>
-    <loc>https://SylviaWhittle.github.io/python-testing-for-research/example-lesson.html</loc>
+    <loc>https://sylviawhittle.github.io/python-testing-for-research/example-lesson.html</loc>
   </url>
   <url>
-    <loc>https://SylviaWhittle.github.io/python-testing-for-research/images.html</loc>
+    <loc>https://sylviawhittle.github.io/python-testing-for-research/images.html</loc>
   </url>
   <url>
-    <loc>https://SylviaWhittle.github.io/python-testing-for-research/index.html</loc>
+    <loc>https://sylviawhittle.github.io/python-testing-for-research/index.html</loc>
   </url>
   <url>
-    <loc>https://SylviaWhittle.github.io/python-testing-for-research/instructor/00-introduction.html</loc>
+    <loc>https://sylviawhittle.github.io/python-testing-for-research/instructor/00-introduction.html</loc>
   </url>
   <url>
-    <loc>https://SylviaWhittle.github.io/python-testing-for-research/instructor/01-introduction.html</loc>
+    <loc>https://sylviawhittle.github.io/python-testing-for-research/instructor/01-introduction.html</loc>
   </url>
   <url>
-    <loc>https://SylviaWhittle.github.io/python-testing-for-research/instructor/01-why-test-my-code.html</loc>
+    <loc>https://sylviawhittle.github.io/python-testing-for-research/instructor/01-why-test-my-code.html</loc>
   </url>
   <url>
-    <loc>https://SylviaWhittle.github.io/python-testing-for-research/instructor/02-simple-tests.html</loc>
+    <loc>https://sylviawhittle.github.io/python-testing-for-research/instructor/02-simple-tests.html</loc>
   </url>
   <url>
-    <loc>https://SylviaWhittle.github.io/python-testing-for-research/instructor/03-interacting-with-tests.html</loc>
+    <loc>https://sylviawhittle.github.io/python-testing-for-research/instructor/03-interacting-with-tests.html</loc>
   </url>
   <url>
-    <loc>https://SylviaWhittle.github.io/python-testing-for-research/instructor/04-unit-tests-best-practices.html</loc>
+    <loc>https://sylviawhittle.github.io/python-testing-for-research/instructor/04-unit-tests-best-practices.html</loc>
   </url>
   <url>
-    <loc>https://SylviaWhittle.github.io/python-testing-for-research/instructor/05-testing-exceptions.html</loc>
+    <loc>https://sylviawhittle.github.io/python-testing-for-research/instructor/05-testing-exceptions.html</loc>
   </url>
   <url>
-    <loc>https://SylviaWhittle.github.io/python-testing-for-research/instructor/06-testing-data-structures.html</loc>
+    <loc>https://sylviawhittle.github.io/python-testing-for-research/instructor/06-testing-data-structures.html</loc>
   </url>
   <url>
-    <loc>https://SylviaWhittle.github.io/python-testing-for-research/instructor/07-fixtures.html</loc>
+    <loc>https://sylviawhittle.github.io/python-testing-for-research/instructor/07-fixtures.html</loc>
   </url>
   <url>
-    <loc>https://SylviaWhittle.github.io/python-testing-for-research/instructor/08-parametrization.html</loc>
+    <loc>https://sylviawhittle.github.io/python-testing-for-research/instructor/08-parametrization.html</loc>
   </url>
   <url>
-    <loc>https://SylviaWhittle.github.io/python-testing-for-research/instructor/09-testing-output-files.html</loc>
+    <loc>https://sylviawhittle.github.io/python-testing-for-research/instructor/09-testing-output-files.html</loc>
   </url>
   <url>
-    <loc>https://SylviaWhittle.github.io/python-testing-for-research/instructor/10-CI.html</loc>
+    <loc>https://sylviawhittle.github.io/python-testing-for-research/instructor/10-CI.html</loc>
   </url>
   <url>
-    <loc>https://SylviaWhittle.github.io/python-testing-for-research/instructor/404.html</loc>
+    <loc>https://sylviawhittle.github.io/python-testing-for-research/instructor/404.html</loc>
   </url>
   <url>
-    <loc>https://SylviaWhittle.github.io/python-testing-for-research/instructor/CODE_OF_CONDUCT.html</loc>
+    <loc>https://sylviawhittle.github.io/python-testing-for-research/instructor/CODE_OF_CONDUCT.html</loc>
   </url>
   <url>
-    <loc>https://SylviaWhittle.github.io/python-testing-for-research/instructor/LICENSE.html</loc>
+    <loc>https://sylviawhittle.github.io/python-testing-for-research/instructor/LICENSE.html</loc>
   </url>
   <url>
-    <loc>https://SylviaWhittle.github.io/python-testing-for-research/instructor/aio.html</loc>
+    <loc>https://sylviawhittle.github.io/python-testing-for-research/instructor/aio.html</loc>
   </url>
   <url>
-    <loc>https://SylviaWhittle.github.io/python-testing-for-research/instructor/example-lesson.html</loc>
+    <loc>https://sylviawhittle.github.io/python-testing-for-research/instructor/example-lesson.html</loc>
   </url>
   <url>
-    <loc>https://SylviaWhittle.github.io/python-testing-for-research/instructor/images.html</loc>
+    <loc>https://sylviawhittle.github.io/python-testing-for-research/instructor/images.html</loc>
   </url>
   <url>
-    <loc>https://SylviaWhittle.github.io/python-testing-for-research/instructor/index.html</loc>
+    <loc>https://sylviawhittle.github.io/python-testing-for-research/instructor/index.html</loc>
   </url>
   <url>
-    <loc>https://SylviaWhittle.github.io/python-testing-for-research/instructor/instructor-notes.html</loc>
+    <loc>https://sylviawhittle.github.io/python-testing-for-research/instructor/instructor-notes.html</loc>
   </url>
   <url>
-    <loc>https://SylviaWhittle.github.io/python-testing-for-research/instructor/introduction.html</loc>
+    <loc>https://sylviawhittle.github.io/python-testing-for-research/instructor/introduction.html</loc>
   </url>
   <url>
-    <loc>https://SylviaWhittle.github.io/python-testing-for-research/instructor/key-points.html</loc>
+    <loc>https://sylviawhittle.github.io/python-testing-for-research/instructor/key-points.html</loc>
   </url>
   <url>
-    <loc>https://SylviaWhittle.github.io/python-testing-for-research/instructor/profiles.html</loc>
+    <loc>https://sylviawhittle.github.io/python-testing-for-research/instructor/profiles.html</loc>
   </url>
   <url>
-    <loc>https://SylviaWhittle.github.io/python-testing-for-research/instructor/reference.html</loc>
+    <loc>https://sylviawhittle.github.io/python-testing-for-research/instructor/reference.html</loc>
   </url>
   <url>
-    <loc>https://SylviaWhittle.github.io/python-testing-for-research/instructor/why-test-my-code.html</loc>
+    <loc>https://sylviawhittle.github.io/python-testing-for-research/instructor/why-test-my-code.html</loc>
   </url>
   <url>
-    <loc>https://SylviaWhittle.github.io/python-testing-for-research/instructor-notes.html</loc>
+    <loc>https://sylviawhittle.github.io/python-testing-for-research/instructor-notes.html</loc>
   </url>
   <url>
-    <loc>https://SylviaWhittle.github.io/python-testing-for-research/introduction.html</loc>
+    <loc>https://sylviawhittle.github.io/python-testing-for-research/introduction.html</loc>
   </url>
   <url>
-    <loc>https://SylviaWhittle.github.io/python-testing-for-research/key-points.html</loc>
+    <loc>https://sylviawhittle.github.io/python-testing-for-research/key-points.html</loc>
   </url>
   <url>
-    <loc>https://SylviaWhittle.github.io/python-testing-for-research/profiles.html</loc>
+    <loc>https://sylviawhittle.github.io/python-testing-for-research/profiles.html</loc>
   </url>
   <url>
-    <loc>https://SylviaWhittle.github.io/python-testing-for-research/reference.html</loc>
+    <loc>https://sylviawhittle.github.io/python-testing-for-research/reference.html</loc>
   </url>
   <url>
-    <loc>https://SylviaWhittle.github.io/python-testing-for-research/why-test-my-code.html</loc>
+    <loc>https://sylviawhittle.github.io/python-testing-for-research/why-test-my-code.html</loc>
   </url>
 </urlset>
