@@ -85,6 +85,6 @@ profiles:
 # This space below is where custom yaml items (e.g. pinning
 # sandpaper and varnish versions) should live
 varnish: RSE-Sheffield/uos-varnish@main
-url: `https://sylviawhittle.github.io/python-testing-for-research/`
+url: 'https://sylviawhittle.github.io/python-testing-for-research/'
 
 
